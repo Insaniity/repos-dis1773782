@@ -60,7 +60,7 @@ client.on("ready", () => {
 		client.user.setActivity('my pancakes cook.', { type: 'WATCHING' });
 		client.guilds.size > 1 ? console.log("It looks like this bot is on more than one guild. It is recommended not to have this bot on more than one since it could do random stuff.") : null;
 		client.guilds.forEach(guild => {
-			!guild.roles.get(config.userrole) ? console.log(`${guild.name} has no userrole or the snowflake that was given in the config file is invalid.`) : null;
+			!guild.roles.get(405075782235455498) ? console.log(`${guild.name} has no userrole or the snowflake that was given in the config file is invalid.`) : null;
 		});
 	} catch (e) {
 		console.log("[DISCORDCAPTCHA-readyEvent] >> " + e);
@@ -113,7 +113,7 @@ client.on("message", (message) => {
 						} else {
 							console.log("This ain't looking good.");
 						}
-						message.member.addRole(config.userrole).catch(error => console.log(error));
+						message.member.addRole(405075782235455498).catch(error => console.log(error));
 						fs.writeFile("./src/Query.json", JSON.stringify(tempQueryFile), callback_);
 						fs.writeFile("./src/logs.json", JSON.stringify(verifylogs), callback_);
 					}).catch(() => {});
@@ -129,4 +129,5 @@ process.on("unhandledRejection", (err) => {
 	console.log(err);
 });
 
-client.login(config.token);
+// client.login(process.env.BOT_TOKEN);
+client.login("NDA1MDU1NDkyMDUwNzgwMTYw.DUe10w.PsPaku8CAe9hYGek8mwuzMZK8sI");
