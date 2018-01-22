@@ -129,5 +129,4 @@ process.on("unhandledRejection", (err) => {
 	console.log(err);
 });
 
-// client.login(process.env.BOT_TOKEN);
-client.login("NDA1MDU1NDkyMDUwNzgwMTYw.DUe10w.PsPaku8CAe9hYGek8mwuzMZK8sI");
+client.login(process.env.BOT_TOKEN);
